@@ -187,6 +187,7 @@ html.js .spread.is-active { visibility: visible; opacity: 1; pointer-events: aut
 .contact-small { color: #bbbbb5; max-width: 410px; font-size: 14px; line-height: 1.6; margin: 24px 0 25px; }
 .contact-links { display: flex; flex-wrap: wrap; gap: 13px 22px; }
 .contact-links a { font: 600 10px var(--mono); letter-spacing: .07em; padding-bottom: 5px; border-bottom: 1px solid #83837b; }
+.contact-links a:first-child { border-color: var(--yellow); }
 .contact-links a:hover { color: var(--yellow); border-color: var(--yellow); }
 .contact-right .page-foot { margin-top: auto; }
 
