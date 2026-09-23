@@ -72,7 +72,7 @@ html.js .spread.is-active { visibility: visible; opacity: 1; pointer-events: aut
 .yellow-period { color: var(--yellow); }
 .cover-subtitle { border-left: 2px solid var(--yellow); padding-left: 17px; margin: 38px 0 0; font: 500 clamp(18px, 1.75vw, 25px)/1.36 var(--sans); letter-spacing: -.035em; }
 .cover-bottom { border-top: 1px solid rgba(255,255,255,.35); display: flex; justify-content: space-between; gap: 10px; padding-top: 16px; font: 500 9px var(--mono); letter-spacing: .12em; color: #c8c8c3; }
-.cover-asterisk { position: absolute; right: -52px; top: 16%; font: 300px/1 var(--serif); color: rgba(255,255,255,.035); pointer-events: none; animation: slow-turn 55s linear infinite; }
+.cover-asterisk { position: absolute; right: -52px; top: 16%; width: 300px; height: 300px; color: rgba(255,255,255,.035); pointer-events: none; animation: slow-turn 55s linear infinite; }
 .cover-right { background: #b4b4af; overflow: hidden; }
 .cover-right > img { width: 100%; height: 100%; object-fit: cover; object-position: center 23%; filter: grayscale(1) contrast(1.11); transition: transform 1s var(--ease), filter .7s; }
 .cover-right:hover > img { transform: scale(1.035); filter: grayscale(.65) contrast(1.07); }
@@ -125,7 +125,7 @@ html.js .spread.is-active { visibility: visible; opacity: 1; pointer-events: aut
 .project-graphic span { position: absolute; border: 1px solid rgba(255,255,255,.15); border-radius: 50%; inset: 0; }
 .project-graphic span:nth-child(2) { inset: 45px; }
 .project-graphic span:nth-child(3) { inset: 90px; }
-.project-graphic b { position: absolute; inset: 32% 0 0 32%; color: var(--yellow); font: 140px/1 var(--serif); opacity: .9; }
+.project-mark { position: absolute; top: 32%; left: 32%; width: 140px; height: 140px; color: var(--yellow); opacity: .9; }
 .projects-right .page-head { margin-bottom: 18px; }
 .project-entry { display: block; border-bottom: 1px solid var(--hairline); padding: 18px 2px 20px; transition: padding-left .3s, background .3s; }
 .project-entry:hover { padding-left: 12px; background: #f0efe9; }
@@ -174,13 +174,13 @@ html.js .spread.is-active { visibility: visible; opacity: 1; pointer-events: aut
 .contact-left > .folio-kicker { margin: auto 0 30px; }
 .contact-left .display-title { font-size: clamp(67px, 6.25vw, 103px); position: relative; z-index: 2; }
 .contact-left .display-title em { font-style: italic; }
-.contact-sun { position: absolute; right: -65px; bottom: -135px; color: rgba(0,0,0,.095); font: 400 430px/1 var(--serif); }
+.contact-sun { position: absolute; right: -65px; bottom: -135px; width: 430px; height: 430px; color: rgba(0,0,0,.095); pointer-events: none; }
 .contact-right .page-head { margin-bottom: auto; }
 .contact-message { padding: 20px 0; }
 .contact-message > p:first-child { font: 400 clamp(27px, 3.1vw, 47px)/1.1 var(--serif); letter-spacing: -.06em; max-width: 430px; margin: 0 0 38px; }
 .email-link { display: block; border-bottom: 2px solid var(--yellow); padding: 0 0 18px; font: 400 clamp(40px, 5vw, 77px)/1.02 var(--serif); letter-spacing: -.065em; transition: color .3s; }
 .email-link:hover { color: var(--yellow); }
-.email-link span { color: var(--yellow); font: 400 40px var(--sans); vertical-align: middle; }
+.email-arrow { width: 40px; height: 40px; color: var(--yellow); vertical-align: middle; }
 .contact-small { color: #bbbbb5; max-width: 410px; font-size: 14px; line-height: 1.6; margin: 24px 0 25px; }
 .contact-links { display: flex; flex-wrap: wrap; gap: 13px 22px; }
 .contact-links a { font: 600 10px var(--mono); letter-spacing: .07em; padding-bottom: 5px; border-bottom: 1px solid #83837b; }
