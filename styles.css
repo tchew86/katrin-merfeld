@@ -226,28 +226,33 @@ html.js .spread.is-active { visibility: visible; opacity: 1; pointer-events: aut
   .chapter-rail a { min-width: 105px; min-height: 37px; flex-direction: row; gap: 7px; border: 1px solid rgba(27,27,25,.2); }
   .chapter-rail a:hover, .chapter-rail a[aria-current="page"] { transform: none; }
   .chapter-rail b { writing-mode: initial; transform: none; font-size: 10px; }
-  .book { height: auto; min-height: 0; }
+  .book { height: auto; min-height: 0; box-shadow: none; }
   .book::after { display: none; }
   .spread { display: block; min-height: 0; }
   html.js .spread { position: relative; inset: auto; display: none; height: auto; opacity: 1; visibility: visible; }
   html.js .spread.is-active { display: block; }
-  .sheet { overflow: visible; min-height: 420px; }
+  .sheet { overflow: visible; min-height: 0; }
   .sheet-left { border-right: none; border-bottom: 1px solid rgba(0,0,0,.2); }
-  .cover-left { min-height: 520px; }
-  .cover-right { min-height: 540px; height: 540px; }
+  .cover-left { min-height: 470px; }
+  .cover-right { min-height: 0; height: min(60svh, 520px); }
   .cover-title-block h1 { font-size: clamp(92px, 13vw, 130px); }
-  .about-title-wrap { margin: 70px 0; }
-  .research-diagram { width: min(65%, 400px); }
-  .project-left { min-height: 570px; }
-  .project-left > .folio-kicker { margin-top: auto; }
-  .project-left > p { margin-bottom: auto; }
-  .publications-left { min-height: 610px; }
-  .publications-left > .folio-kicker { margin-top: 50px; }
-  .teaching-left { height: 580px; }
-  .teaching-right { min-height: 650px; }
-  .contact-left { min-height: 540px; }
-  .contact-left > .folio-kicker { margin-top: auto; }
-  .contact-right { min-height: 530px; }
+  .about-title-wrap { margin: 48px 0; }
+  .research-left .display-title { margin-top: 42px; }
+  .research-diagram { width: min(65%, 360px); }
+  .project-left { min-height: 0; }
+  .project-left > .folio-kicker { margin: 48px 0 22px; }
+  .project-left > p { margin: 24px 0 42px; }
+  .project-graphic { width: 310px; height: 310px; right: -150px; bottom: -145px; opacity: .25; }
+  .publications-left { min-height: 0; }
+  .publications-left > .folio-kicker { margin: 48px 0 22px; }
+  .pub-feature { margin-bottom: 32px; }
+  .teaching-left { height: min(60svh, 520px); }
+  .teaching-right { min-height: 0; }
+  .contact-left { min-height: 0; }
+  .contact-left > .folio-kicker { margin: 70px 0 28px; }
+  .contact-left .display-title { margin-bottom: 70px; }
+  .contact-right { min-height: 0; }
+  .contact-right .page-head { margin-bottom: 75px; }
   .folio-footer { padding-left: 0; grid-template-columns: 1fr; gap: 0; padding-block: 10px 24px; }
   .pager { justify-content: space-between; }
   .footer-note { text-align: center; }
@@ -257,38 +262,46 @@ html.js .spread.is-active { visibility: visible; opacity: 1; pointer-events: aut
 }
 
 @media (max-width: 540px) {
-  .site-wrap { width: calc(100% - 20px); }
-  .topbar { min-height: 64px; }
+  .site-wrap { width: 100%; }
+  .topbar { min-height: 64px; padding-inline: 18px; }
   .wordmark { font-size: 9px; gap: 9px; }
   .wordmark-monogram { font-size: 25px; }
   .topbar-mail { font-size: 9px; }
-  .chapter-rail a { min-width: 90px; }
+  .chapter-rail { padding: 0 18px 12px; scroll-snap-type: x proximity; }
+  .chapter-rail a { min-width: 90px; scroll-snap-align: start; }
   .paper, .ink-sheet, .cover-left, .contact-left { padding: 23px 23px 24px; }
   .page-head, .page-foot { font-size: 8px; letter-spacing: .07em; }
-  .cover-left { min-height: 480px; }
+  .cover-left { min-height: 430px; }
   .cover-title-block h1 { font-size: clamp(72px, 17vw, 102px); }
   .cover-subtitle { font-size: 20px; }
   .cover-bottom { font-size: 8px; }
-  .cover-right { min-height: 450px; height: 450px; }
+  .cover-right { min-height: 0; height: min(53svh, 410px); }
   .cover-enter { right: 15px; top: 15px; padding: 11px; font-size: 9px; gap: 10px; }
-  .display-title, .about-title-wrap .display-title, .project-left .display-title, .publications-left .display-title, .contact-left .display-title { font-size: clamp(60px, 14vw, 82px); }
-  .about-title-wrap { margin: 50px 0; }
+  .display-title, .about-title-wrap .display-title, .publications-left .display-title, .contact-left .display-title { font-size: clamp(50px, 12.8vw, 68px); }
+  .about-title-wrap { margin: 38px 0; }
   .about-text p { font-size: 14px; }
   .about-text p:first-child { font-size: 19px; }
-  .research-diagram { width: min(90%, 340px); margin-block: 30px; }
+  .research-diagram { width: min(78%, 280px); margin-block: 20px; }
   .point-sharing { right: -3%; }
   .research-entry h3 { font-size: 37px; }
-  .project-left { min-height: 500px; }
-  .project-graphic { right: -240px; }
-  .project-entry strong { font-size: 38px; }
-  .publications-left { min-height: 570px; }
+  .project-left { min-height: 0; }
+  .project-left > .folio-kicker { margin: 34px 0 16px; }
+  .project-left .display-title { font-size: clamp(45px, 11.9vw, 59px); line-height: 1.02; }
+  .project-left > p { margin: 20px 0 32px; font-size: 15px; }
+  .project-graphic { display: none; }
+  .project-entry strong { font-size: clamp(29px, 8vw, 38px); }
+  .publications-left { min-height: 0; }
   .pub-feature strong { font-size: 33px; }
-  .teaching-left { height: 500px; }
-  .teaching-right { min-height: 650px; }
-  .teaching-right .display-title { margin-top: 55px; }
-  .contact-left { min-height: 490px; }
-  .contact-right { min-height: 510px; }
+  .teaching-left { height: min(49svh, 370px); }
+  .teaching-right { min-height: 0; }
+  .teaching-right .display-title { margin-top: 35px; }
+  .contact-left { min-height: 0; }
+  .contact-left > .folio-kicker { margin: 45px 0 22px; }
+  .contact-left .display-title { margin-bottom: 55px; }
+  .contact-right { min-height: 0; }
+  .contact-right .page-head { margin-bottom: 52px; }
   .email-link { font-size: clamp(43px, 10vw, 58px); }
+  .folio-footer { padding-inline: 18px; }
   .pager { gap: 5px; }
   .pager button { min-width: 64px; font-size: 18px; }
   .pager button span { display: none; }
