@@ -23,7 +23,6 @@ from reportlab.platypus import (
     PageBreak,
     Paragraph,
     SimpleDocTemplate,
-    Spacer,
     Table,
     TableStyle,
 )
@@ -127,7 +126,7 @@ JOURNAL = [
 ]
 
 OTHER_WORK = [
-    "de Jong, J. P. J., van Balen, T., Boënne, M., Merfeld, K., Mulhuijzen, M., & Rigtering, C. (2024). Collaboration with lead user firms in new product development: A source of Schumpeterian opportunity. SSRN working paper.",
+    "Bulkeley, H., Lacambra, C., Barnwal, A., Blackwatters, J. J., Callenberg, M., Demonsant, C., Fransen, A., Jeong, J., Kinniburgh, F., Lillquist, J., Maia, S., Merfeld, K., & Toxopeus, H. (2026). Integration, Financing and Just Transition for Urban Sustainability. The British Academy. Research report.",
     "Toxopeus, H., & Merfeld, K. (2023). Exploring business models for sustainability with nature as a key resource: A case study of urban nature-based solutions. SSRN working paper.",
     "Merfeld, K. (2018). Shared and autonomous: A market perspective on contemporary mobility. Doctoral dissertation.",
     "Wilhelms, M. P., Henkel, S., & Merfeld, K. (2017). You are what you share: Understanding participation motives in peer-to-peer carsharing. In Disrupting Mobility: Impacts of Sharing Economy and Innovative Transportation on Cities (pp. 105-119). Springer.",
@@ -199,16 +198,14 @@ def build():
             story.append(p(str(year), "subsection"))
         story.append(plain(citation, "pub"))
 
-    story += section("Books, thesis and working papers")
+    story += section("Reports, books and working papers")
     story += [plain(citation, "pub") for citation in OTHER_WORK]
 
     story += section("Conference presentations")
-    story += [p("Presentations listed in the supplied publication record", "muted")]
     conference_text = (ROOT / "cv" / "conferences.txt").read_text(encoding="utf-8")
     conference_entries = [x.strip() for x in conference_text.split("\n\n") if x.strip()]
     for item in conference_entries:
         story.append(plain(item, "conference"))
-    story += [Spacer(1, 12), p('<b>Record note:</b> Updated September 2026. Current appointment and journal citations were checked against Utrecht University staff pages. Conference presentations follow the supplied publication list. For the latest research output, see the <link href="https://research-portal.uu.nl/en/persons/katrin-merfeld/" color="#60605C">Utrecht University Research Portal</link>.', "muted")]
 
     OUTPUT.parent.mkdir(exist_ok=True)
     doc.build(story, onFirstPage=draw_page, onLaterPages=draw_page)

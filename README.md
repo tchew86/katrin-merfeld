@@ -13,9 +13,9 @@ The site intentionally uses a small yellow accent that alludes to Utrecht Univer
 
 ## CV and publications
 
-The site offers one [five-page CV and publications PDF](assets/Katrin-Merfeld-CV-and-Publications.pdf) from the About and Publications chapters. It combines the supplied CV and publication record, updates the appointment and journal articles against Utrecht University's staff pages, and omits private home and mobile contact details. Please review the record with Katrin before using it for formal applications.
+The site offers one [CV and publications PDF](assets/Katrin-Merfeld-CV-and-Publications.pdf) from the About and Publications chapters. It combines the supplied CV and publication record, updates the appointment and journal articles against Utrecht University's staff pages, includes her [2026 British Academy report](https://www.thebritishacademy.ac.uk/publications/integration-financing-and-just-transition-for-urban-sustainability/), and omits private home and mobile contact details. Please review the record with Katrin before using it for formal applications.
 
-To update the PDF, edit the CV and journal data in `scripts/build_cv.py` and the conference list in `cv/conferences.txt`. Install ReportLab with `python -m pip install reportlab`, then run `python scripts/build_cv.py` from the repository root. Commit the rebuilt PDF with the source changes; GitHub Pages serves the PDF directly from `assets/`.
+To update the PDF, edit the CV and publication data in `scripts/build_cv.py` and the conference list in `cv/conferences.txt`. Install ReportLab with `python -m pip install reportlab`, then run `python scripts/build_cv.py` from the repository root. Commit the rebuilt PDF with the source changes; GitHub Pages serves the PDF directly from `assets/`.
 
 ## Design reference
 
