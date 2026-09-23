@@ -155,8 +155,8 @@ html.js .spread.is-active { visibility: visible; opacity: 1; pointer-events: aut
 
 /* Teaching */
 .teaching-left { background: #252525; overflow: hidden; }
-.teaching-left > img { height: 100%; width: 100%; object-fit: cover; object-position: center 28%; filter: grayscale(1) contrast(1.05); transition: transform .8s var(--ease), filter .8s; }
-.teaching-left:hover > img { transform: scale(1.025); filter: grayscale(.55) contrast(1.02); }
+.teaching-left > img { height: 100%; width: 100%; object-fit: cover; object-position: right center; transform: scale(1.28); transform-origin: right center; filter: grayscale(1) contrast(1.05); transition: transform .8s var(--ease), filter .8s; }
+.teaching-left:hover > img { transform: scale(1.31); filter: grayscale(.55) contrast(1.02); }
 .teaching-left::after { content: ''; position: absolute; inset: 70% 0 0; background: linear-gradient(0deg, rgba(0,0,0,.55), transparent); pointer-events: none; }
 .teaching-photo-label { position: absolute; z-index: 2; bottom: 29px; left: 31px; display: flex; flex-direction: column; gap: 5px; color: #fff; font: 600 10px var(--mono); letter-spacing: .11em; }
 .teaching-right .display-title { margin: 37px 0 15px; }
@@ -293,6 +293,8 @@ html.js .spread.is-active { visibility: visible; opacity: 1; pointer-events: aut
   .publications-left { min-height: 0; }
   .pub-feature strong { font-size: 33px; }
   .teaching-left { height: min(49svh, 370px); }
+  .teaching-left > img { transform: scale(1.4); }
+  .teaching-left:hover > img { transform: scale(1.43); }
   .teaching-right { min-height: 0; }
   .teaching-right .display-title { margin-top: 35px; }
   .contact-left { min-height: 0; }
