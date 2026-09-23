@@ -62,6 +62,8 @@ html.js .spread.is-active { visibility: visible; opacity: 1; pointer-events: aut
 .folio-link { display: inline-flex; justify-content: space-between; align-items: center; gap: 25px; width: fit-content; border-bottom: 1px solid currentColor; padding: 11px 0; font: 600 10px var(--mono); letter-spacing: .08em; transition: gap .25s; }
 .folio-link:hover { gap: 37px; }
 .folio-link span { font-size: 17px; }
+.download-link { background: var(--yellow); border-bottom: 0; padding: 13px 16px; }
+.download-link:hover { background: #ffe061; }
 
 /* Cover */
 .cover-left { background: #1b1b19; color: #faf9f2; padding: 33px clamp(29px, 3.1vw, 56px) 31px; overflow: hidden; }
@@ -92,6 +94,7 @@ html.js .spread.is-active { visibility: visible; opacity: 1; pointer-events: aut
 .about-text p { color: var(--soft-ink); font: 400 clamp(14px, 1.17vw, 16px)/1.75 var(--sans); margin: 0 0 16px; }
 .about-text p:first-child { font-size: clamp(18px, 1.55vw, 22px); line-height: 1.5; color: var(--ink); letter-spacing: -.025em; }
 .about-text .folio-link { margin-top: 4px; }
+.about-text .download-link { margin: 9px 0 10px; }
 .margin-mark { position: relative; border-left: 3px solid var(--yellow); padding: 2px 0 2px 15px; margin: 0 0 26px; display: flex; flex-direction: column; gap: 6px; }
 .margin-mark span { font: 600 9px var(--mono); letter-spacing: .12em; }
 .margin-mark strong { font: 500 17px var(--serif); font-style: italic; }

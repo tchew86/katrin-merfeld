@@ -11,6 +11,12 @@ A responsive, interactive research folio for Dr. Katrin Merfeld. The site presen
 
 The site intentionally uses a small yellow accent that alludes to Utrecht University. It does not use the university logo or present itself as an official university website. Chapter transitions respect reduced-motion preferences, and the content remains readable when JavaScript is unavailable.
 
+## CV and publications
+
+The site offers one [five-page CV and publications PDF](assets/Katrin-Merfeld-CV-and-Publications.pdf) from the About and Publications chapters. It combines the supplied CV and publication record, updates the appointment and journal articles against Utrecht University's staff pages, and omits private home and mobile contact details. Please review the record with Katrin before using it for formal applications.
+
+To update the PDF, edit the CV and journal data in `scripts/build_cv.py` and the conference list in `cv/conferences.txt`. Install ReportLab with `python -m pip install reportlab`, then run `python scripts/build_cv.py` from the repository root. Commit the rebuilt PDF with the source changes; GitHub Pages serves the PDF directly from `assets/`.
+
 ## Design reference
 
 The book concept was developed after reviewing the MIT-licensed [Creative Personal Portfolio Website](https://github.com/trananhtuat/creative-portfolio-website) and the [Sketchbook](https://github.com/MengTo/sketchbook) experiment. This folio's layout, styling, interaction code, and content were written specifically for Katrin; no third-party photographs or copied template files are included.
@@ -21,7 +27,7 @@ Fork this repository, then open **Settings → Pages** in your fork. Under **Bui
 
 ## Content sources
 
-Content was checked in September 2026 against the [Utrecht University staff profile](https://www.uu.nl/staff/KMerfeld), the [Utrecht University Research Portal](https://research-portal.uu.nl/en/persons/katrin-merfeld/), the [Business & Social Impact programme](https://www.uu.nl/en/masters/business-and-social-impact), and the public [NATURESCAPES](https://www.naturescapes-project.com/) and [ClimEx-PE](https://climexpe.elte.hu/) project sites. Supplied CV and publication documents informed the initial draft but are not included in the public repository because the CV contains personal contact details. The site is a curated personal introduction; the Utrecht profile and research portal are the live sources for future updates.
+Content was checked in September 2026 against the [Utrecht University staff profile](https://www.uu.nl/staff/KMerfeld), the [Utrecht University publications page](https://www.uu.nl/staff/KMerfeld/Publications), the [Utrecht University Research Portal](https://research-portal.uu.nl/en/persons/katrin-merfeld/), the [Business & Social Impact programme](https://www.uu.nl/en/masters/business-and-social-impact), and the public [NATURESCAPES](https://www.naturescapes-project.com/) and [ClimEx-PE](https://climexpe.elte.hu/) project sites. The original supplied documents remain local because the source CV contains private contact details; the new public CV includes professional contact details only. The Utrecht profile and research portal remain the live sources for future updates.
 
 Photographs were supplied for this site. Their reuse rights are reserved by their respective owner; please do not reuse them outside this personal site without permission.
 
